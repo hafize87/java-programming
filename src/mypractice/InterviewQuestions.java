@@ -1,6 +1,8 @@
 package mypractice;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class InterviewQuestions {
     public static void main(String[] args) {
@@ -15,26 +17,26 @@ public class InterviewQuestions {
 
 
       // 1. way solution
-        String str1 = "abcabc";
-        String str2 = "cbaabc";
-        boolean b = true;
-
-        if(str1.length() == str2.length()) {
-
-            for (int i = 0; i < str1.length(); i++) {
-                if (!str2.contains(str1.charAt(i) + "")) {
-                    b = false;
-                    break;
-                }
-            }
-        }
-        else{
-
-            b = false;
-        }
-
-
-        System.out.println(b);
+//        String str1 = "abcabc";
+//        String str2 = "cbaabc";
+//        boolean b = true;
+//
+//        if(str1.length() == str2.length()) {
+//
+//            for (int i = 0; i < str1.length(); i++) {
+//                if (!str2.contains(str1.charAt(i) + "")) {
+//                    b = false;
+//                    break;
+//                }
+//            }
+//        }
+//        else{
+//
+//            b = false;
+//        }
+//
+//
+//        System.out.println(b);
 
 
 
@@ -193,29 +195,53 @@ public class InterviewQuestions {
 //
 //        OutPut: "CD015ACCCG011899"
 
-//        String str = "DC501GCCCA098911";
-//
-//        String str2 = "";
-//
-//        for(int i = 0; i < str.length(); i++) {
-//
-//            if(Character.isLetter(str.charAt(i))){
-//                str2 += str.charAt(i);
-//                if(i == str.length()-1 || Character.isDigit(str.charAt(i + 1))){
-//                    str2 += ",";
-//                }
-//
-//            }
-//            if(Character.isDigit(str.charAt(i))){
-//                str2 += str.charAt(i);
-//                if(i == str.length()-1 || Character.isLetter(str.charAt(i + 1))){
-//                    str2 += ",";
-//                }
-//            }
-//        }
-//        System.out.println(str2);
+        String str = "DC501GCCCA098911";
 
-        
+        String str2 = "";
+
+        for(int i = 0; i < str.length(); i++) {
+
+            if(Character.isLetter(str.charAt(i))){
+                str2 += str.charAt(i);
+                if(i == str.length()-1 || Character.isDigit(str.charAt(i + 1))){
+                    str2 += ",";
+                }
+
+            }
+            if(Character.isDigit(str.charAt(i))){
+                str2 += str.charAt(i);
+                if(i == str.length()-1 || Character.isLetter(str.charAt(i + 1))){
+                    str2 += ",";
+                }
+            }
+        }
+        System.out.println(str2);
+
+        String [] letters = str2.split(",");
+
+        System.out.println(Arrays.toString(letters));
+
+        String sortLetter = "";
+
+        for(String each : letters){
+
+            char [] eachLetter =  each.toCharArray();
+
+            Arrays.sort(eachLetter);
+
+            for (char each1: eachLetter){
+
+                sortLetter += each1;
+            }
+        }
+
+        System.out.println(sortLetter);
+
+
+
+        // 2. way
+
+
 
 //        String [] array = str2.split(",");
 //
@@ -255,6 +281,65 @@ public class InterviewQuestions {
 
 
 
+//        String password = "hFdgth1";
+//
+//        if(password.length() >= 6 && !password.contains(" ")){
+//
+//            int upperCase = 0;
+//            int lowerCase =0;
+//            int number = 0;
+//            int special =0;
+//
+//            for (int i = 0; i < password.length(); i++) {
+//                if(password.charAt(i) >= 'A' && password.charAt(i) <= 'Z'){
+//                    upperCase++;
+//                }
+//                else if (password.charAt(i) >= 'a' && password.charAt(i) <= 'z') {
+//                    lowerCase++;
+//                }
+//                else if (password.charAt(i) >= '0' && password.charAt(i) <= '9') {
+//                    number++;
+//                }
+//                else{
+//                    special++;
+//                }
+//            }
+//
+//
+//            if(upperCase >= 1) {
+//
+//                if (lowerCase >= 1) {
+//
+//                    if(number >= 1){
+//
+//                        if(special >=1){
+//
+//                            System.out.println("Correct password");
+//                        }
+//
+//                        else{
+//                            System.out.println("NOT correct password you need special character");
+//                        }
+//                    }
+//                    else{
+//                        System.out.println("NOT correct password you need number");
+//                    }
+//
+//                }
+//                else{
+//                    System.out.println("NOT correct password you need lower case");
+//                }
+//
+//            }
+//            else{
+//                System.out.println("NOT correct password you need upper case");
+//            }
+//
+//        }
+//
+//        else{
+//            System.out.println("NOT correct password at least 6 character or no space");
+//        }
 
     }
 }
