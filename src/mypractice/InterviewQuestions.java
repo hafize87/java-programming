@@ -195,47 +195,47 @@ public class InterviewQuestions {
 //
 //        OutPut: "CD015ACCCG011899"
 
-        String str = "DC501GCCCA098911";
-
-        String str2 = "";
-
-        for(int i = 0; i < str.length(); i++) {
-
-            if(Character.isLetter(str.charAt(i))){
-                str2 += str.charAt(i);
-                if(i == str.length()-1 || Character.isDigit(str.charAt(i + 1))){
-                    str2 += ",";
-                }
-
-            }
-            if(Character.isDigit(str.charAt(i))){
-                str2 += str.charAt(i);
-                if(i == str.length()-1 || Character.isLetter(str.charAt(i + 1))){
-                    str2 += ",";
-                }
-            }
-        }
-        System.out.println(str2);
-
-        String [] letters = str2.split(",");
-
-        System.out.println(Arrays.toString(letters));
-
-        String sortLetter = "";
-
-        for(String each : letters){
-
-            char [] eachLetter =  each.toCharArray();
-
-            Arrays.sort(eachLetter);
-
-            for (char each1: eachLetter){
-
-                sortLetter += each1;
-            }
-        }
-
-        System.out.println(sortLetter);
+//        String str = "DC501GCCCA098911";
+//
+//        String str2 = "";
+//
+//        for(int i = 0; i < str.length(); i++) {
+//
+//            if(Character.isLetter(str.charAt(i))){
+//                str2 += str.charAt(i);
+//                if(i == str.length()-1 || Character.isDigit(str.charAt(i + 1))){
+//                    str2 += ",";
+//                }
+//
+//            }
+//            if(Character.isDigit(str.charAt(i))){
+//                str2 += str.charAt(i);
+//                if(i == str.length()-1 || Character.isLetter(str.charAt(i + 1))){
+//                    str2 += ",";
+//                }
+//            }
+//        }
+//        System.out.println(str2);
+//
+//        String [] letters = str2.split(",");
+//
+//        System.out.println(Arrays.toString(letters));
+//
+//        String sortLetter = "";
+//
+//        for(String each : letters){
+//
+//            char [] eachLetter =  each.toCharArray();
+//
+//            Arrays.sort(eachLetter);
+//
+//            for (char each1: eachLetter){
+//
+//                sortLetter += each1;
+//            }
+//        }
+//
+//        System.out.println(sortLetter);
 
 
 
@@ -340,6 +340,66 @@ public class InterviewQuestions {
 //        else{
 //            System.out.println("NOT correct password at least 6 character or no space");
 //        }
+
+
+        //----------------------------------------------------------
+
+//        String -- sum of digits in a string
+//
+//        Write a method that can return the sum of the digits in a string
+
+        String str = "I got 3 apples, 5 kiwis, 6 oranges";
+
+       //  1. way
+        List<String> list =new ArrayList<>();
+
+
+
+        for (int i = 0; i < str.length(); i++) {
+
+            if(Character.isDigit(str.charAt(i))){
+
+                list.add(str.charAt(i)+"");
+            }
+
+        }
+        System.out.println(list);
+
+        int result = 0;
+        for (String each : list){
+
+            result += Integer.parseInt(each);
+        }
+        System.out.println(result);
+
+       // 2 way
+
+//        int result = 0;
+//        for (int i = 0; i < str.length(); i++) {
+//
+//            if(Character.isDigit(str.charAt(i))){
+//                result += Integer.parseInt(str.charAt(i)+"");
+//            }
+//
+//        }
+//        System.out.println(result);
+
+        // 3 way
+
+//        int result = 0;
+//       char [] arrays = str.toCharArray();
+//
+//
+//       for(char each : arrays){
+//
+//           if(Character.isDigit(each)){
+//
+//               result += Integer.parseInt(each +"");
+//           }
+//
+//       }
+//        System.out.println(result);
+
 
     }
 }

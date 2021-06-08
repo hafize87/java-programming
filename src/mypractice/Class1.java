@@ -2,27 +2,54 @@ package mypractice;
 
 public class Class1 {
 
-    String data;
-    int yint;
+    private String firstName;
+    private String lastName;
+    private int age;
 
-    public Class1 (String data, int yint){
-        this.data = data;
-        this.yint = yint;
+    public Class1(){
+
+        firstName = "undefined";
+        lastName = "undefined";
+        age = -1;
+
     }
 
-    public String getData() {
-        return data;
+    public Class1(String firstName, String lastName, int age){
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public int getYint() {
-        return yint;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setYint(int yint) {
-        this.yint = yint;
+    public String getLastName() {
+        return lastName;
     }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return  firstName + " | " + lastName + " | " + age;
+
+    }
+
+
 }

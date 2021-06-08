@@ -33,23 +33,19 @@ public class ScrumTeam {
 //    toString(): prints number of tester,& developers,  PO name, SM name, BA name
 
 
-    String PO;
-    String BA;
-    String SM;
-
+    String productOwner;
+    String scrumMaster;
+    String businessAnalyst;
     ArrayList<Tester> allTesters;
-    ArrayList<Developer> allDevelopers ;
+    ArrayList<Developer> allDevelopers;
+    int sprintNumber;
 
-    int SprintNumber;
-
-
-    public ScrumTeam(String PO, String BA, String SM){
-        this.PO = PO;
-        this.BA = BA;
-        this.SM = SM;
-        allTesters = new ArrayList<>();
-        allDevelopers = new ArrayList<>();
-
+    public ScrumTeam(String productOwner, String scrumMaster, String businessAnalyst) {
+        this.productOwner = productOwner;
+        this.scrumMaster = scrumMaster;
+        this.businessAnalyst = businessAnalyst;
+        this.allTesters = new ArrayList<>();
+        this.allDevelopers = new ArrayList<>();
     }
 
     public void addTester(Tester tester){
@@ -66,16 +62,49 @@ public class ScrumTeam {
         this.allDevelopers.addAll(Arrays.asList(developer));
     }
 
-    public static void main(String[] args) {
-        ScrumTeam scrumTeam = new ScrumTeam("Ziba", "John", "Fikret");
-        System.out.println(scrumTeam.allTesters);
-        Tester tester1 = new Tester("Maxim", 10, "SDET", 1000000);
-        scrumTeam.addTester(tester1);
-        scrumTeam.addTester(new Tester("Anna", 11, "SDET", 10000000));
-        System.out.println(scrumTeam.allTesters);
+    public boolean removeTester(int employeeId ){
 
-        scrumTeam.addDeveloper(new Developer("Anton", 1, "dev", 10000000));
-        System.out.println(scrumTeam.allDevelopers);
+        for(int i=0; i < allTesters.size(); i++){
 
+            if(allTesters.get(i).getEmployeeID() == employeeId){ // Tester -> 11 == 12
+                allTesters.remove(i);
+                return true;
+            }
+
+        }
+        return false;
     }
+
+    public boolean removeDeveloper (int employeeId){
+        int size = allDevelopers.size();
+        allDevelopers.removeIf(eachDev -> eachDev.getEmployeeId() == employeeId);
+        return size != allDevelopers.size();
+    }
+
+    @Override
+    public String toString() {
+        return "ScrumTeam{" +
+                "productOwner='" + productOwner + '\'' +
+                ", scrumMaster='" + scrumMaster + '\'' +
+                ", businessAnalyst='" + businessAnalyst + '\'' +
+                ", allTesters=" + allTesters +
+                ", allDevelopers=" + allDevelopers +
+                ", sprintNumber=" + sprintNumber +
+                '}';
+    }
+
+    //    public static void main(String[] args) {
+//        ScrumTeam scrumTeam = new ScrumTeam("Ziba", "John", "Fikret");
+//        System.out.println(scrumTeam.allTesters);
+//        Tester tester1 = new Tester("Maxim", 10, "SDET", 1000000);
+//        scrumTeam.addTester(tester1);
+//        scrumTeam.addTester(new Tester("Anna", 11, "SDET", 10000000));
+//        System.out.println(scrumTeam.allTesters);
+//
+//        scrumTeam.addDeveloper(new Developer("Anton", 1, "dev", 10000000));
+//        System.out.println(scrumTeam.allDevelopers);
+//
+//    }
+
+
 }

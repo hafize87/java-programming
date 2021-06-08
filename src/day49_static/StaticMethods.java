@@ -19,10 +19,11 @@ public class StaticMethods {
 
         System.out.println("Other static method");
         displayMessage("wooden spoon");
+
     }
 
 
-    // StaticMethods.instanceMethod();   -->  NO
+    //StaticMethods.instanceMethod();   -->  NO
     // StaticMethods stm = new StaticMethods();
     // stm.StaticMethods();
     public void instanceMethod(){
