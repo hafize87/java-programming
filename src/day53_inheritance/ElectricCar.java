@@ -8,8 +8,9 @@ public class ElectricCar {
     private int year;
     private int range;
 
-    public ElectricCar(String make, String model, double price, int year, int range) {
-       setMake(make);
+    public ElectricCar(String make, String model, double price, int year, int range)
+    {
+         setMake(make);       // they are some , useful when setter has some condition
         this.model = model;
         this.price = price;
         this.year = year;
@@ -43,7 +44,13 @@ public class ElectricCar {
     }
 
     public void setMake(String make) {
-        this.make = make;
+
+        if(make.isEmpty()){
+            System.out.println("ERROR: can not be blank");
+        }else {
+            this.make = make;
+        }
+
     }
 
     public String getModel() {
