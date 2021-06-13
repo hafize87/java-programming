@@ -8,6 +8,14 @@ public class ElectricCar {
     private int year;
     private int range;
 
+    public ElectricCar(String make, String model, double price, int year, int range) {
+       setMake(make);
+        this.model = model;
+        this.price = price;
+        this.year = year;
+        this.range = range;
+    }
+
     public int getRange() {
         return range;
     }
@@ -60,5 +68,16 @@ public class ElectricCar {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "ElectricCar{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", price=" + price +
+                ", year=" + year +
+                ", range=" + range +
+                '}';
     }
 }
