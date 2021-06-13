@@ -1,6 +1,6 @@
 package day49_static;
 
-public class BankAccountTest {
+public  class BankAccountTest {
     public static void main(String[] args) {
 
 
@@ -22,6 +22,6 @@ public class BankAccountTest {
         bankAccount2.spend(20);
         bankAccount2.showBalance();
 
-        System.out.println(bankAccount1.showBalance());
+        System.out.println(bankAccount1.showBalance());  // 20
     }
 }

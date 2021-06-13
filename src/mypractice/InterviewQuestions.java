@@ -1,8 +1,6 @@
 package mypractice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class InterviewQuestions {
     public static void main(String[] args) {
@@ -348,29 +346,29 @@ public class InterviewQuestions {
 //
 //        Write a method that can return the sum of the digits in a string
 
-        String str = "I got 3 apples, 5 kiwis, 6 oranges";
-
-       //  1. way
-        List<String> list =new ArrayList<>();
-
-
-
-        for (int i = 0; i < str.length(); i++) {
-
-            if(Character.isDigit(str.charAt(i))){
-
-                list.add(str.charAt(i)+"");
-            }
-
-        }
-        System.out.println(list);
-
-        int result = 0;
-        for (String each : list){
-
-            result += Integer.parseInt(each);
-        }
-        System.out.println(result);
+//        String str = "I got 3 apples, 5 kiwis, 6 oranges";
+//
+//       //  1. way
+//        List<String> list =new ArrayList<>();
+//
+//
+//
+//        for (int i = 0; i < str.length(); i++) {
+//
+//            if(Character.isDigit(str.charAt(i))){
+//
+//                list.add(str.charAt(i)+"");
+//            }
+//
+//        }
+//        System.out.println(list);
+//
+//        int result = 0;
+//        for (String each : list){
+//
+//            result += Integer.parseInt(each);
+//        }
+//        System.out.println(result);
 
        // 2 way
 
@@ -400,6 +398,46 @@ public class InterviewQuestions {
 //       }
 //        System.out.println(result);
 
+
+        // --------------------------------------------------------------------------------------
+
+
+//        Array -- Find Maximum
+//        Write a method that can find the maximum number from an int Array
+
+
+        int [] arrays = {3, 50, 7, 45};
+
+        // 1 way
+        Arrays.sort(arrays);
+        System.out.println(arrays[arrays.length-1]);
+
+        // 2 way
+
+        List <Integer> list = new ArrayList<>();
+
+        for (int each : arrays){
+
+            list.add(each);
+        }
+
+        System.out.println(Collections.max(list));
+
+
+
+
+        // 3 way
+        int max = arrays[0];
+
+        for (int each : arrays){
+
+            if(each > max){
+                max = each;
+            }
+
+        }
+
+        System.out.println(max);
 
     }
 }

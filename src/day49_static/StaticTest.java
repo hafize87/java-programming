@@ -7,7 +7,10 @@ public class StaticTest {
 
         StaticMethods.displayMessage("wooden spoon");
 
+
         StaticMethods stm = new StaticMethods();
         stm.instanceMethod();
+        stm.displayMessage("hi");
+
     }
 }

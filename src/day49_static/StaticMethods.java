@@ -14,24 +14,27 @@ public class StaticMethods {
         System.out.println("count " + count);  // NO ERROR. count is static variable
 
     }
-
-    public static void otherStaticMethod(){
-
-        System.out.println("Other static method");
-        displayMessage("wooden spoon");
-
-    }
-
-
-    //StaticMethods.instanceMethod();   -->  NO
-    // StaticMethods stm = new StaticMethods();
-    // stm.StaticMethods();
+//    StaticMethods.instanceMethod();   -->  NO
+//    StaticMethods stm = new StaticMethods();
+//    stm.StaticMethods();
     public void instanceMethod(){
 
         System.out.println("instance method");
         System.out.println("num " + num);
         System.out.println("count " + count);
         displayMessage("Hello from instance method");
+
     }
+
+    public static void otherStaticMethod(){
+
+        System.out.println("Other static method");
+        displayMessage("wooden spoon");
+
+
+    }
+
+
+
 
 }
