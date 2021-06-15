@@ -3,18 +3,18 @@ package mypractice;
 import java.util.*;
 
 public class InterviewQuestions {
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
 
 //        String -- Same letters
 
-     //   Write a return method that check if a string is build out of the same letters as another string.
+    //   Write a return method that check if a string is build out of the same letters as another string.
 
-     //   Ex:  same("abc",  "cab"); -> true
+    //   Ex:  same("abc",  "cab"); -> true
 
-     //   same("abc",  "abb"); -> false:
+    //   same("abc",  "abb"); -> false:
 
 
-      // 1. way solution
+    // 1. way solution
 //        String str1 = "abcabc";
 //        String str2 = "cbaabc";
 //        boolean b = true;
@@ -37,11 +37,7 @@ public class InterviewQuestions {
 //        System.out.println(b);
 
 
-
-
-
-
-     //  2. way solution
+    //  2. way solution
 
 //        String str1 = "abc";
 //        String str2 = "cba";
@@ -58,7 +54,7 @@ public class InterviewQuestions {
 //        System.out.println(b);
 
 
-        //-----------------------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------
 
 //        String -- Frequency of Characters
 
@@ -83,7 +79,7 @@ public class InterviewQuestions {
 //        System.out.println(character);
 
 
-        //---------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------
 
 //        String -- Remove Duplicates
 
@@ -91,7 +87,7 @@ public class InterviewQuestions {
 //
 //        Ex:  removeDup("AAABBBCCC")  ==> ABC
 
-        // 1. way solution
+    // 1. way solution
 
 //        String str = "AAABBBCCC";
 //
@@ -104,7 +100,7 @@ public class InterviewQuestions {
 //        }
 //        System.out.println(duplicate);
 
-       // 2. way solution
+    // 2. way solution
 
 //        String str = "ABBBCCCDZFggkyyyt";
 //        int count = 0;
@@ -125,7 +121,7 @@ public class InterviewQuestions {
 //
 //        System.out.println(duplicate);
 
-      // ---------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------
 
 //        String -- Find the unique
 
@@ -133,7 +129,7 @@ public class InterviewQuestions {
 //
 //        Ex:  unique("AAABBBCCCDEF")  ==>  "DEF";
 
-        // 1. way solution
+    // 1. way solution
 
 //        String str = "AAABBBCCDEF";
 //
@@ -146,7 +142,7 @@ public class InterviewQuestions {
 //        }
 //        System.out.println(unique);
 
-        // 2. way solution
+    // 2. way solution
 
 //        for(int i = 0; i<str.length();i++){
 //            int count = 0;
@@ -163,7 +159,7 @@ public class InterviewQuestions {
 //        System.out.println(unique);
 
 
-      //---------------------------------------------------------------------
+    //---------------------------------------------------------------------
 
 //      String -- Reverse
 //
@@ -180,7 +176,19 @@ public class InterviewQuestions {
 //        }
 //        System.out.println(reverse);
 
-     // ---------------------------------------------------------------------
+
+    // 2 way
+
+//        String name = "Ihsan";
+//
+//        List<String> reverse = new ArrayList<>(Arrays.asList(name.split("")));
+//
+//        Collections.reverse(reverse);
+//
+//        System.out.println(String.join("", reverse));
+
+
+    // ---------------------------------------------------------------------
 
 //        String -- Sort Letters and Numbers from alphanumeric String
 //
@@ -236,9 +244,7 @@ public class InterviewQuestions {
 //        System.out.println(sortLetter);
 
 
-
-        // 2. way
-
+    // 2. way
 
 
 //        String [] array = str2.split(",");
@@ -257,7 +263,7 @@ public class InterviewQuestions {
 //        System.out.println(str);
 
 
-        // ------------------------------------------------------------------------
+    // ------------------------------------------------------------------------
 
 //        String -- Password Validation Task
 //
@@ -276,7 +282,6 @@ public class InterviewQuestions {
 //        5. Password should at least contain a digit
 //
 //        if all requirements above are met, the method returns true, otherwise returns  false
-
 
 
 //        String password = "hFdgth1";
@@ -340,7 +345,7 @@ public class InterviewQuestions {
 //        }
 
 
-        //----------------------------------------------------------
+    //----------------------------------------------------------
 
 //        String -- sum of digits in a string
 //
@@ -370,7 +375,7 @@ public class InterviewQuestions {
 //        }
 //        System.out.println(result);
 
-       // 2 way
+    // 2 way
 
 //        int result = 0;
 //        for (int i = 0; i < str.length(); i++) {
@@ -382,7 +387,7 @@ public class InterviewQuestions {
 //        }
 //        System.out.println(result);
 
-        // 3 way
+    // 3 way
 
 //        int result = 0;
 //       char [] arrays = str.toCharArray();
@@ -399,45 +404,183 @@ public class InterviewQuestions {
 //        System.out.println(result);
 
 
-        // --------------------------------------------------------------------------------------
+    // --------------------------------------------------------------------------------------
 
 
 //        Array -- Find Maximum
 //        Write a method that can find the maximum number from an int Array
 
+//
+//        int [] arrays = {3, 50, 7, 45};
+//
+//        // 1 way
+//        Arrays.sort(arrays);
+//        System.out.println(arrays[arrays.length-1]);
+//
+//        // 2 way
+//
+//        List <Integer> list = new ArrayList<>();
+//
+//        for (int each : arrays){
+//
+//            list.add(each);
+//        }
+//
+//        System.out.println(Collections.max(list));
 
-        int [] arrays = {3, 50, 7, 45};
+
+    // 3 way
+//        int max = arrays[0];
+//
+//        for (int each : arrays){
+//
+//            if(each > max){
+//                max = each;
+//            }
+//
+//        }
+//
+//        System.out.println(max);
+
+//     }
+
+    // --------------------------------------------------------------
+
+    //  Array -- Sort Ascending
+
+    // Write a return method that can sort an int array in Ascending order without using the sort method of the Arrays class
+
+//    public static void main(String[] args) {
+//
+//
+//        System.out.println(Arrays.toString(sort(new int[]{3, 1, 5, 8, 2})));
+//
+//    }
+//
+//    public static int[] sort(int[] arrays){
+
+    // 1 way
+
+//        Arrays.sort(arrays);
+//
+//        return arrays;
+
+    // 2 way
+
+//        for(int i = 0; i<arrays.length; i++){
+//
+//            for (int j = 0; j<arrays.length;  j++) {
+//
+//                if(arrays[i] < arrays[j]) {
+//
+//                    int temp = arrays[i];
+//                    arrays[i] = arrays[j];
+//                    arrays[j] = temp;
+//                }
+//            }
+//        }
+//            return arrays;
+
+
+    // 3 way
+
+//       List<Integer> num = new ArrayList<>();
+//
+//        for (int i = 0; i < arrays.length; i++) {
+//
+//           num.add(arrays[i]);
+//        }
+//
+//        for (int i = 0; i < arrays.length; i++) {
+//
+//            arrays[i] = (Collections.min(num));
+//            num.remove(Collections.min(num));
+//
+//        }
+//
+//        return arrays;
+//    }
+
+
+    // --------------------------------------------------------------
+
+    //  Array -- Sort Descending
+
+    // Write a return method that can sort an int array in descending order without using the sort method of the Arrays class
+
+    public static void main(String[] args) {
+
+
+        System.out.println(Arrays.toString(sort(new int[]{3, 1, 5, 8, 2})));
+
+    }
+
+    public static int[] sort(int[] arrays) {
+
 
         // 1 way
-        Arrays.sort(arrays);
-        System.out.println(arrays[arrays.length-1]);
+
+//        for(int i = 0; i<arrays.length; i++){
+//
+//            for (int j = 0; j<arrays.length;  j++) {
+//
+//                if(arrays[i] > arrays[j]) {
+//
+//                    int temp = arrays[i];
+//                    arrays[i] = arrays[j];
+//                    arrays[j] = temp;
+//                }
+//            }
+//        }
+//            return arrays;
+
 
         // 2 way
+//
+//        List<Integer> num = new ArrayList<>();
+//
+//        for (int i = 0; i < arrays.length; i++) {
+//
+//            num.add(arrays[i]);
+//        }
+//
+//        for (int i = 0; i < arrays.length; i++) {
+//
+//            arrays[i] = (Collections.max(num));
+//            num.remove(Collections.max(num));
+//
+//        }
+//
+//        return arrays;
 
-        List <Integer> list = new ArrayList<>();
+        //  3 way
+//
+//        Arrays.sort(arrays);
+//
+//        for (int i =0; i<arrays.length/2 ; i++) {
+//
+//            int temp = arrays[i];
+//            arrays[i] = arrays[arrays.length-1-i];
+//            arrays[arrays.length-1-i] = temp;
+//
+//        }
+//
+//        return arrays;
+//    }
 
-        for (int each : arrays){
+        //  3 way
 
-            list.add(each);
+        Arrays.sort(arrays);
+
+        int [] descending = new int[arrays.length];
+
+        for (int i = arrays.length-1, j = 0; i >= 0; i--, j++) {
+
+            descending[j] = arrays[i];
         }
 
-        System.out.println(Collections.max(list));
 
-
-
-
-        // 3 way
-        int max = arrays[0];
-
-        for (int each : arrays){
-
-            if(each > max){
-                max = each;
-            }
-
-        }
-
-        System.out.println(max);
+        return descending;
 
     }
 }

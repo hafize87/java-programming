@@ -1,8 +1,10 @@
 package mypractice;
 
-public class Smartphone {
+public class Smartphone extends Samsung {
 
-    public static void makeCall(String name){
-        System.out.println("I am calling : " + name);
-    }
+   public Smartphone(){
+       super();
+       System.out.println("child class");
+
+   }
 }
