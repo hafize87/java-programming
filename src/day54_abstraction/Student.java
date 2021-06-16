@@ -12,19 +12,3 @@ public abstract class Student {
 
 
 
- class OnlineStudent extends Student{
-
-     public void attendClass(){
-
-
-     }
-
-}
-
-
-class SchoolObject{
-
-    public static void main(String[] args) {
-
-    }
-}
