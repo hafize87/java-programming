@@ -1,15 +1,9 @@
 package day55_abstraction.exercise_example;
 
-public class Lifting extends Exercise{
+public abstract class Lifting extends Exercise{
 
 
-    @Override
-    public void perform() {
 
-    }
+      public abstract void endLift();
 
-    @Override
-    public int getCaloriesCount(int minutes) {
-        return 0;
-    }
 }
