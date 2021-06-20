@@ -508,14 +508,14 @@ public class InterviewQuestions {
 
     // Write a return method that can sort an int array in descending order without using the sort method of the Arrays class
 
-    public static void main(String[] args) {
-
-
-        System.out.println(Arrays.toString(sort(new int[]{3, 1, 5, 8, 2})));
-
-    }
-
-    public static int[] sort(int[] arrays) {
+//    public static void main(String[] args) {
+//
+//
+//        System.out.println(Arrays.toString(sort(new int[]{3, 1, 5, 8, 2})));
+//
+//    }
+//
+//    public static int[] sort(int[] arrays) {
 
 
         // 1 way
@@ -569,18 +569,53 @@ public class InterviewQuestions {
 //    }
 
         //  3 way
+//
+//        Arrays.sort(arrays);
+//
+//        int [] descending = new int[arrays.length];
+//
+//        for (int i = arrays.length-1, j = 0; i >= 0; i--, j++) {
+//
+//            descending[j] = arrays[i];
+//        }
+//
+//
+//        return descending;
 
-        Arrays.sort(arrays);
+//    }
 
-        int [] descending = new int[arrays.length];
 
-        for (int i = arrays.length-1, j = 0; i >= 0; i--, j++) {
+    public static void main(String[] args) {
 
-            descending[j] = arrays[i];
+        System.out.println(Arrays.toString(moveZero(new int[]{1, 0, 2, 0, 3, 0, 4, 0})));
+
+    }
+
+    public static int[] moveZero(int[] array){
+
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j<array.length; j++){
+
+                if(array[i] > array[j]){
+
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
         }
 
+        for(int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
 
-        return descending;
+                if(array[i] != 0 && array[i] < array[j]){
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        return array;
 
     }
 }

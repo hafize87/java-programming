@@ -7,6 +7,8 @@ public abstract class MyAbstractClass {
     public void learn(){
         System.out.println("Learning...");
     }
+
+
     public abstract void close();
 
 
@@ -16,6 +18,7 @@ public abstract class MyAbstractClass {
 
 class Sub extends MyAbstractClass{
 
+    @Override
     public void close(){
 
         System.out.println("Close - abstract method implementation");
@@ -28,7 +31,7 @@ class Sub extends MyAbstractClass{
 class MyObjects{
     public static void main(String[] args) {
 
-     //   MyAbstractClass mac = new MyAbstractClass();
+      // MyAbstractClass mac = new MyAbstractClass();
 
         Sub sub = new Sub();
         sub.learn();

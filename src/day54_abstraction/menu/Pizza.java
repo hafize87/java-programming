@@ -5,7 +5,7 @@ public class Pizza extends MenuItem{
     @Override
     public void prepare(){
 
-        System.out.println("put mashroom , onion, ");
+        System.out.println("put mushroom , onion, ");
 
     }
 

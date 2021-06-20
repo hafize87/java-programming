@@ -4,10 +4,21 @@ package mypractice;
 
 
 public class Main {
-    public static void main(String[] args) {
+
+   static void run(){
+       System.out.println(1);
+   }
 
 
-        Smartphone smartphone = new Smartphone();
-        System.out.println(smartphone);
-    }
+
+
+
+     public static void main(String[] args) {
+         System.out.println(2);
+     }
+
+     static {
+         System.out.println(3);
+     }
+
 }
