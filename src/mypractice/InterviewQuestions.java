@@ -585,37 +585,41 @@ public class InterviewQuestions {
 //    }
 
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//
+//        System.out.println(Arrays.toString(moveZero(new int[]{1, 0, 2, 0, 3, 0, 4, 0})));
+//
+//    }
+//
+//    public static int[] moveZero(int[] array){
 
-        System.out.println(Arrays.toString(moveZero(new int[]{1, 0, 2, 0, 3, 0, 4, 0})));
-
+//      List <Integer > numbers = new ArrayList<>();
+//
+//
+//        for(int i = 0; i < array.length; i++){
+//
+//
+//
+//            if(array[i] == 0 ){
+//
+//                numbers.add(numbers.size()-1);
+//
+//            }
+////        }
+////        System.out.println(Arrays.toString(array));
+////
+////        for(int i = 0; i < array.length; i++) {
+////            for (int j = 0; j < array.length; j++) {
+////
+////                if(array[i] != 0 && array[i] < array[j]){
+////                    int temp = array[i];
+////                    array[i] = array[j];
+////                    array[j] = temp;
+////                }
+////            }
+////        }
+//        return array;
+//
+//    }
+//
     }
-
-    public static int[] moveZero(int[] array){
-
-        for(int i = 0; i < array.length; i++){
-            for(int j = 0; j<array.length; j++){
-
-                if(array[i] > array[j]){
-
-                    int temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-            }
-        }
-
-        for(int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-
-                if(array[i] != 0 && array[i] < array[j]){
-                    int temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-            }
-        }
-        return array;
-
-    }
-}
