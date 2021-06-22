@@ -2,7 +2,10 @@ package day56_abstraction;
 
 public interface Greeting {
 
-    void hi();
+    void hi();  // public abstract is added by compiler
+
+
     void bye();
+
 
 }
