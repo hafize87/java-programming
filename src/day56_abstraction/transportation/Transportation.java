@@ -1,4 +1,4 @@
-package day56_abstraction;
+package day56_abstraction.transportation;
 
 public abstract class Transportation {
 
