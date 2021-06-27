@@ -5,7 +5,7 @@ public class Admin extends User{
 
     public Admin(){
 
-        super();  // call super class no args constructor
+       super();  // call super class no args constructor
         System.out.println("Admin class constructor");
     }
 

@@ -9,6 +9,7 @@ public class BookObjects {
         book.type = "programming";
         book.price = 75.00;
 
+
         System.out.println(book.title);
         System.out.println(book.author);
         System.out.println(book.type);
