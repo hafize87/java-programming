@@ -33,5 +33,29 @@ public class ShapeTest {
         }
 
 
+             drawShape(new Circle());
+             drawShape(new Square());
+             drawShape(new Triangle());
+
+
+    }
+
+//    public static void drawShape(Circle shape) {
+//        System.out.println("---- Drawing shape ----");
+//        shape.draw();
+//
+//    }
+//
+//    public static void drawShape(Square shape) {
+//        System.out.println("---- Drawing shape ----");
+//        shape.draw();
+//
+//    }
+
+
+    public static void drawShape(Shape shape) {         // --> 2 tane hepsi icin ayri ayri olacagina boyle parent class i kullanip hepsi icin yazabiliriz
+        System.out.println("---- Drawing shape ----");
+        shape.draw();
+
     }
 }
