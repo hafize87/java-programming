@@ -21,6 +21,16 @@ public class ShapeTest {
         shapes.add(new Triangle());
         shapes.add(new Circle());
         shapes.add(new Square());
+        shapes.add(circle);
+        shapes.add(square);
+        shapes.add(new Circle());
+        shapes.add(new Square());
+
+      //  System.out.println(shapes);  prints hashcode of objects
+
+        for(Shape each: shapes){
+           each.draw();
+        }
 
 
     }
