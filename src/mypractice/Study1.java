@@ -1,5 +1,6 @@
 package mypractice;
-import day38_methods.ArrayUtils;
+
+
 
 import java.util.*;
 
@@ -8,43 +9,39 @@ public class Study1 {
     public static void main(String[] args) {
 
 
-        System.out.println(reverseNoSpec("Ab,c,de!$"));
+        System.out.println(a("tomorrow"));
     }
 
-    public static String reverseNoSpec(String str) {
+    public static String a(String s ) {
 
-        // your code here
+       String str =  "";
+        //output = t$m$$r$$$w
 
+        for (int i = 0; i < s.length(); i++) {
+            int count = 0;
+            for (int j = 0; j < s.length(); j++) {
 
-        String rev = "";
+                if (s.charAt(i) == s.charAt(j)) {
+                    count++;
 
-
-        for (int i = 0; i < str.length(); i++) {
-
-            if (Character.isLetter(str.charAt(i))) {
-                for (int j = str.length() - 1; j >= 0; i++) {
-
+                }
+                if (count > 1 && !str.contains(s.charAt(i)+"")) {
+                    str += s.charAt(i);
                 }
             }
         }
 
-//        String empty = "";
-//        for(int i =str.length()-1; i>= 0; i++){
-//            if(Character.isLetter(str.charAt(i))){
-//
-//                empty += str.charAt(i);
-//                  if(i == str.length()-1 || !Character.isLetter(str.charAt(i+1))){
-//                      empty += " ";
-//                  }
-//
-//            }
-//            else{
-//                empty += str.charAt(i);
-//                if(i == str.length()-1 || Character.isLetter(str.charAt(i+1))){
-//                    empty += " ";
-//                }
-//            }
-//        }
-         return null;
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < s.length(); j++) {
+                if(str.charAt(i) == s.charAt(j)){
+
+                 s =   s.replace(s.charAt(j)+"", "$");
+            }
+
+            }
+        }
+        return s;
+
+
     }
 }
