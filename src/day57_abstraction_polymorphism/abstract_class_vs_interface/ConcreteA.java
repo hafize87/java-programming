@@ -18,5 +18,10 @@ public class ConcreteA extends AbstractA implements InterfaceA, InterfaceB {
         System.out.println("static methodC is called");
     }
 
+    @Override
+    public void absMethodD(int num){
+
+    }
+
 
 }

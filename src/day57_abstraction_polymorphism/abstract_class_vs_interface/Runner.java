@@ -5,5 +5,7 @@ public class Runner {
 
        //   AbstractA absA = new AbstractA();    --> we can not create object from abstract class
         //    InterfaceA infA = new InterfaceA();    --> we can not create object from interface
+
+        InterfaceA.staticMethodE("Wooden spoon");
     }
 }
