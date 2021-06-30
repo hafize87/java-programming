@@ -7,12 +7,11 @@ public class SuperMan extends Father implements Worker{
         System.out.println("Superman is working as " + job);
 
     }
+
     public double getPaid(){
 
-        System.out.println("");
-
+        System.out.println("Superman get paid");
         return 8000;
-
     }
 
 }
