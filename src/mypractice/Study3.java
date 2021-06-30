@@ -5,29 +5,29 @@ import java.util.*;
 public class Study3 {
     public static void main(String[] args) {
 
-        String [] wordList = {"f","o","o"};
-        String [] wordList1 = {"b","a","r"};
-        System.out.println(combineRs(wordList, wordList1));
+        String str = "tomorrow";
 
-
+           combine(str);
     }
-    public static ArrayList<String> combineRs(String[] r1,String[] r2){
+    public static void combine(String str) {
 
-        // your code here
+        String a = "";
 
-        ArrayList<String> total = new ArrayList<>();
+        int count = 0;
 
-        for(String each : r1){
-            total.add(each);
+        for (int i = 0; i < str.length(); i = a.length()) {
+
+            a += str.charAt(i);
+
+         count++;
+
+            for (int j = 0 ; j < count; j++) {
+
+                a += "$";
+            }
         }
-        for(String each : r2){
-            total.add(each);
-        }
 
-
-
-             return total;
-
+        System.out.println(a);
     }
 
 
