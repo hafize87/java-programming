@@ -19,7 +19,8 @@ public class InputField implements WebElement{
     @Override
     public String getText() {
 
-        return "";
+        System.out.println("getting text from inputField");
+        return "java";
     }
 
     public String getValue(){

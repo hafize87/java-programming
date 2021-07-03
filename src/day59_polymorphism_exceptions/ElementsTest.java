@@ -11,11 +11,9 @@ public class ElementsTest {
 
         WebElement loginLink = new Link();
         loginLink.click();
-
         String txt = loginLink.getText();
         System.out.println("txt = " + txt);
-
-     //   loginLink.getLinkHref();   ERROR
+        //loginLink.getLinkHref(); ERROR
 
         WebElement username = new InputField();
         username.sendKeys("wooden spoon");
@@ -23,6 +21,7 @@ public class ElementsTest {
 
         WebElementUtil.clickElement(loginLink);
         WebElementUtil.clickElement(username);
+        //WebElementUtil.clickElement(new String("hello")); String is not child of WebElement
 
         WebElement login = WebElementUtil.getLinkWithText("login");
         login.click();
