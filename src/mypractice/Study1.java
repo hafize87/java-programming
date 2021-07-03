@@ -8,40 +8,25 @@ public class Study1 {
 
     public static void main(String[] args) {
 
-
-        System.out.println(a("tomorrow"));
+        int[] nums = {3, 3, 5, 988, 2, 65, 8, 1008,432, 50, 455, 300, 106};
+        System.out.println(a(nums));
     }
 
-    public static String a(String s ) {
+    public static int a(int [] array ) {
 
-       String str =  "";
-        //output = t$m$$r$$$w
+        int s = 0;
 
-        for (int i = 0; i < s.length(); i++) {
-            int count = 0;
-            for (int j = 0; j < s.length(); j++) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (array[i] > array[j]) {
 
-                if (s.charAt(i) == s.charAt(j)) {
-                    count++;
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
 
-                }
-                if (count > 1 && !str.contains(s.charAt(i)+"")) {
-                    str += s.charAt(i);
                 }
             }
         }
-
-        for (int i = 0; i < str.length(); i++) {
-            for (int j = 0; j < s.length(); j++) {
-                if(str.charAt(i) == s.charAt(j)){
-
-                 s =   s.replace(s.charAt(j)+"", "$");
-            }
-
-            }
-        }
-        return s;
-
-
+        return array[1];
     }
 }

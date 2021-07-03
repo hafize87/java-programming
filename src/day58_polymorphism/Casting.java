@@ -3,20 +3,18 @@ package day58_polymorphism;
 public class Casting {
     public static void main(String[] args) {
 
-        // variable of worker and object of superman
+        //variable of worker and object of superMan
+        Worker worker = new SuperMan();
+        worker.work("QA Manager");
+        worker.getPaid();
 
-        Worker spMan1 = new SuperMan();
-        spMan1.work("QA Manager");
-        spMan1.getPaid();
+        ((Father)worker).raiseKid();
+        ((SuperMan)worker).playWithKid();
 
-
-        ((Father)spMan1).raiseKid();
-        ((SuperMan)spMan1).playWithKid();
-
-
-        // DOWNCASTING from worker to superman
-
-        SuperMan spMan2 = (SuperMan) spMan1;
+        //DOWNCASTING FROM WORKER TO SUPERMAN
+        SuperMan superMan = (SuperMan) worker;
+        superMan.feedKid();
+        superMan.work("java dev");
     }
 
 
