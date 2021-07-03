@@ -8,9 +8,9 @@ public class RuntimeErrorExamples {
          * ArithmeticException
          */
 
-        System.out.println(10/2);
-        System.out.println(10/0);
-        System.out.println(10/3);
+        System.out.println(10 / 2);
+        System.out.println(10 / 0);
+        System.out.println(10 / 3);
 
 
 
