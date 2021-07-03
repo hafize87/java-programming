@@ -9,4 +9,11 @@ public class WebElementUtil {
 
 
     }
+
+
+    public  static WebElement getLinkWithText(String txt){
+
+        System.out.println("searcing " + txt);
+        return new Link();
+    }
 }
