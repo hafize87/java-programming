@@ -20,5 +20,8 @@ public class ElementsTest {
         WebElement username = new InputField();
         username.sendKeys("wooden spoon");
         username.click();
+
+        WebElementUtil.clickElement(loginLink);
+        WebElementUtil.clickElement(username);
     }
 }
