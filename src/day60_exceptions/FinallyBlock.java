@@ -15,7 +15,7 @@ public class FinallyBlock {
             int num = input.nextInt();
             System.out.println("You entered " + num);
            // System.out.println(num / 0);
-           //  System.exit(0);  // stop java all together , finally block will not run
+           System.exit(0);  // stop java all together , finally block will not run
         } catch (InputMismatchException e){
 
             System.out.println("You entered invalid value");

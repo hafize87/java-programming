@@ -1,12 +1,29 @@
 package mypractice;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+
+        Discover discover = new Discover(input.nextLong(), input.nextDouble());
+        System.out.println(discover);
+
+        CapitalOne capitalOne = new CapitalOne(input.nextLong(), input.nextDouble());
+        capitalOne.useCard();
+        System.out.println(capitalOne);
+
+        Chase chase = new Chase(input.nextLong(), input.nextDouble());
+        chase.payBalance(input.nextDouble());
+        System.out.println(chase);
+
 
     }
-}
+
+    }
+
 class CreditCard{
 
     long cardNumber;
@@ -52,8 +69,8 @@ class Discover extends CreditCard{
 
     public String toString() {
         return "Discover credit cart" +
-                " | cardNumber: " + cardNumber +
-                " | balance: " + balance +
+                " | card number: " + cardNumber +
+                " | balance used: " + balance +
                 " | APR: " + apr +
                 " | has cashback: " + cashback;
     }
@@ -85,8 +102,8 @@ class CapitalOne extends CreditCard{
     @Override
     public String toString() {
         return "Capital One credit cart" +
-                " | cardNumber: " + cardNumber +
-                " | balance: " + balance +
+                " | card number: " + cardNumber +
+                " | balance used: " + balance +
                 " | APR: " + apr +
                 " | has cashback: " + cashback;
     }
@@ -116,8 +133,8 @@ class Chase extends CreditCard{
     @Override
     public String toString() {
         return "Chase credit cart" +
-                " | cardNumber: " + cardNumber +
-                " | balance: " + balance +
+                " | card number: " + cardNumber +
+                " | balance used: " + balance +
                 " | APR: " + apr +
                 " | has cashback: " + cashback;
     }
