@@ -1,4 +1,4 @@
-package day61_exceptions_collections.errors;
+package day61_exceptions.errors;
 
 import java.util.ArrayList;
 import java.util.List;

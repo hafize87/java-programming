@@ -1,4 +1,4 @@
-package day61_exceptions_collections.checked_exceptions;
+package day61_exceptions.checked_exceptions;
 
 import java.io.IOException;
 import java.nio.file.Files;
